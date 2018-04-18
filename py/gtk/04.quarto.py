@@ -29,8 +29,9 @@ class MyWindow(Gtk.Window):
     def on_button_clicked(self, widget):
         # calcola la media ......
         # e modifica la label di testo self.media di conseguenza ...
-        print("Hello World")
-
+        
+        self.media.set_text(self.voti.get_text())
+		# TODO : calcolare la media estraendo dalla stringa i valori ...
 
 win = MyWindow()
 win.connect("delete-event", Gtk.main_quit)
